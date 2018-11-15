@@ -1,0 +1,14 @@
+.cycle {
+    height: 75px;
+    margin-top: -10px;
+}
+.days {
+    margin-top: -45px;
+    color: #3ed6ca;
+    font-weight: 800;
+}
+.month {
+    font-weight: 300;
+    color: black;
+    font-size: 19px;
+}

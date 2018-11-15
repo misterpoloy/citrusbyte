@@ -1,0 +1,13 @@
+.ant-layout-header {
+    background: #ffffff;
+}
+.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+    border-bottom: 2px solid #AB61E5;
+    color: black;
+}
+.ant-badge-count {
+    background-color:#AB61E5;
+}
+.ant-badge {
+    padding: 10px
+}

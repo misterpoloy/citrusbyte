@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+.flex-container {
+    display: flex;
+    height: 92vh; /** - 8 from Footer **/
+    align-items: center;
+    justify-content: center;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr {
+    width: 200px;
+    margin-top: 40px;
+    margin-bottom: 30px
+}
+
+img + h2 { 
+    margin-top: 10px;
+}
