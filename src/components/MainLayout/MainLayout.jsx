@@ -15,7 +15,7 @@ class MainLayout extends React.Component {
       <Layout style={ styles.layout }>
         <Header user={ user } logout={ logout } history={ history } />
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
-          <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+          <div style={{ background: '#fff', padding: 24, minHeight: '80vh' }}>
             { this.props.children }
           </div>
         </Content>

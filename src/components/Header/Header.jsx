@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 // Main config
-import config from './../../constants/config' 
+import config from './../../constants/config'
+// Routes codes
+import routesCode from './../../constants/routes'
 // Ant design
 import { Layout, Menu, Badge } from 'antd';
 // App Components
@@ -20,15 +22,16 @@ class AppFooter extends React.Component {
   selectedKey = () => {
     const { history } = this.props
     switch (history.location.pathname) {
-      case '/':
+      case routesCode.AUTH.SHAREFB:
       return '2'
-      case '/feedback':
+      case routesCode.AUTH.MYFB:
       return '3'
-      case '/team':
+      case routesCode.AUTH.TEAMFB:
       return '4'
-      case '/teams':
+      case routesCode.AUTH.TEAMS:
       return '5'
       default:
+        // Return the default for add fedback / routes / etc
         return '2'
     }
   }
@@ -44,19 +47,21 @@ class AppFooter extends React.Component {
           defaultSelectedKeys={[ this.selectedKey() ]}
           style={{ lineHeight: '64px' }}
         >
-          <Menu.Item key="1" onClick={ () => this.changeMenu('/') } ><h1 style={ styles.h1 }>{ config.appName }</h1></Menu.Item>
-          <Menu.Item key="2" onClick={ () => this.changeMenu('/') } >
+          <Menu.Item key="1" onClick={ () => this.changeMenu(routesCode.AUTH.SHAREFB) } >
+            <h1 style={ styles.h1 }>{ config.appName }</h1>
+          </Menu.Item>
+          <Menu.Item key="2" onClick={ () => this.changeMenu(routesCode.AUTH.SHAREFB) } >
             <Badge count={5}>
               Share feedback
             </Badge>
           </Menu.Item>
-          <Menu.Item  key="3" onClick={ () => this.changeMenu('/feedback') }>
+          <Menu.Item  key="3" onClick={ () => this.changeMenu(routesCode.AUTH.MYFB) }>
             <Badge count={2}>
               My feedback
             </Badge>
           </Menu.Item>
-          <Menu.Item key="4" onClick={ () => this.changeMenu('/team') } >Team feedback</Menu.Item>
-          <Menu.Item key="5" onClick={ () => this.changeMenu('/teams') } >Teams</Menu.Item>
+          <Menu.Item key="4" onClick={ () => this.changeMenu(routesCode.AUTH.TEAMFB) } >Team feedback</Menu.Item>
+          <Menu.Item key="5" onClick={ () => this.changeMenu(routesCode.AUTH.TEAMS) } >Teams</Menu.Item>
           <Menu.Item key="6" style={ styles.right } ><Avatar logout={ logout } user={ user } /></Menu.Item>
           <Menu.Item key="7" style={ styles.right } ><MenuCircle /></Menu.Item>
         </Menu>
