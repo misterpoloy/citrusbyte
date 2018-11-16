@@ -10,7 +10,7 @@ import MainLayout from './../../components/MainLayout/MainLayout';
 // Style
 import './style.css';
 
-class Team extends React.Component {
+class Error404 extends React.Component {
   componentDidMount() {
     const { getUserList } = this.props.actions
     getUserList()
@@ -20,14 +20,14 @@ class Team extends React.Component {
     return(
       <MainLayout user={ user  } logout={ logout } history={ history } >
         <div className="home-container">
-          <h2>Team feedback</h2>
+          <h2>Error 404</h2>
         </div>
       </MainLayout>
     )
   }
 }
 
-Team.propTypes = {
+Error404.propTypes = {
   user: PropTypes.object,
   logout: PropTypes.func,
   history: PropTypes.object,
@@ -46,4 +46,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Team);   
+export default connect(mapStateToProps, mapDispatchToProps)(Error404);   

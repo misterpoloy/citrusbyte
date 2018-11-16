@@ -6,10 +6,12 @@ import withAuthorization from './components/HOC/RouteProtector/RouteProtector'
 import routesCode from './constants/routes'
 // Containers
 import Login from './containers/Login/Login'
-import Home from './containers/Home/Home'
-import Feedback from './containers/Feedback/Feedback'
-import Team from './containers/Team/Team'
+import ShareFeedback from './containers/ShareFeedback/ShareFeedback'
+import MyFeedback from './containers/MyFeedback/MyFeedback'
+import TeamFeedback from './containers/TeamFeedback/TeamFeedback'
 import Teams from './containers/Teams/Teams'
+// Error pages
+import Error404 from './containers/Error404/Error404'
 
 class Routes extends Component {
   render() {
@@ -17,10 +19,11 @@ class Routes extends Component {
       <BrowserRouter>
         <div>
           <Route path={ routesCode.PUBLIC.LOGIN } component={Login} />
-          <Route exact path={ routesCode.AUTH.SHAREFB } component={withAuthorization(Home)} />
-          <Route path={ routesCode.AUTH.MYFB } component={withAuthorization(Feedback)} />
-          <Route path={ routesCode.AUTH.TEAMFB } component={withAuthorization(Team)} />
+          <Route exact path={ routesCode.AUTH.SHAREFB } component={withAuthorization(ShareFeedback)} />
+          <Route path={ routesCode.AUTH.MYFB } component={withAuthorization(MyFeedback)} />
+          <Route path={ routesCode.AUTH.TEAMFB } component={withAuthorization(TeamFeedback)} />
           <Route path={ routesCode.AUTH.TEAMS } component={withAuthorization(Teams)} />
+          <Route component={withAuthorization(Error404)} />
         </div>
       </BrowserRouter>
     );

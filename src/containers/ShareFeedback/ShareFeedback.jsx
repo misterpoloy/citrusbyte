@@ -15,7 +15,7 @@ import CycleSelect from './../../components/CycleSelect/CycleSelect'
 // Style
 import './style.css';
 
-class Home extends React.Component {
+class ShareFeedback extends React.Component {
   componentDidMount() {
     const { getUserList } = this.props.actions
     getUserList()
@@ -40,7 +40,7 @@ class Home extends React.Component {
   }
 }
 
-Home.propTypes = {
+ShareFeedback.propTypes = {
   user: PropTypes.object,
   logout: PropTypes.func,
   history: PropTypes.object,
@@ -59,4 +59,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);   
+export default connect(mapStateToProps, mapDispatchToProps)(ShareFeedback);   

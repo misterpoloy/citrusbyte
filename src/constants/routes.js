@@ -7,6 +7,8 @@ export default {
     MYFB: '/my-feedback',
     TEAMFB: '/team-feedback',
     TEAMS: '/teams',
+    USERQUESTIONS: '/answer/user/:userQuestionsId',
+    TEAMQUESTIONS: '/answer/team/:grupQuestionsId',
   },
   ADMIN: {
     DASHBOARD: '/admin/assign',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 // Redux
 import { connect } from 'react-redux'
-import {bindActionCreators} from 'redux'
+import { bindActionCreators } from 'redux'
 // Redux-actions
 import * as authActions from './../../../redux/actions/auth'
 // Ant design

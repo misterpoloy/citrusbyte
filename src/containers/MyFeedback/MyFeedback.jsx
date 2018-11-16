@@ -10,7 +10,7 @@ import MainLayout from './../../components/MainLayout/MainLayout';
 // Style
 import './style.css';
 
-class Feedback extends React.Component {
+class MyFeedback extends React.Component {
   componentDidMount() {
     const { getUserList } = this.props.actions
     getUserList()
@@ -27,7 +27,7 @@ class Feedback extends React.Component {
   }
 }
 
-Feedback.propTypes = {
+MyFeedback.propTypes = {
   user: PropTypes.object,
   logout: PropTypes.func,
   history: PropTypes.object,
@@ -46,4 +46,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Feedback);   
+export default connect(mapStateToProps, mapDispatchToProps)(MyFeedback);   
