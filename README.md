@@ -2,6 +2,8 @@
 
 # CitrusByte project by JP
 
+Live site: https://easy-feedback.firebaseapp.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information about the structure and information of this demo.<br>
