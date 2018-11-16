@@ -11,3 +11,7 @@
 .ant-badge {
     padding: 10px
 }
+.ant-btn {
+  -webkit-box-shadow: white;
+  box-shadow: white;
+}

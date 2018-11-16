@@ -23,7 +23,11 @@ export default [{
   key: 'address',
   render: text => (
     <div>
-      <Link to={ routesCode.AUTH.USERQUESTIONSButton + '/test' } style={{ background: config.primaryColor, borderColor: config.primaryColor }} type="primary">Fill out</Link>
+      <Link to={ routesCode.AUTH.USERQUESTIONSButton + '/test' }>
+        <Button style={{ background: config.primaryColor, borderColor: config.primaryColor }} type="primary">
+          Fill out
+        </Button>
+      </Link>
     </div>
   )
 }];
