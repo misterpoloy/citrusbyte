@@ -11,14 +11,19 @@ import { Spin, Icon } from 'antd';
 
 export default (WrappedComponent) => {
   class RouteProtector extends React.Component {
+
     componentDidMount() {
       const { actions } = this.props
       const token = localStorage.getItem("user");
       if (token) {
+        console.log('bacon')
+        this.setState(() => { logged: true })
         actions.setUser(JSON.parse(token))
       }
     }
     render() {
+      const token = localStorage.getItem("user");
+
       const {
         isLoading,
         user,
@@ -32,12 +37,12 @@ export default (WrappedComponent) => {
       }
       
       // If user, that's it
-      if (user) {
+      if (user || token) {
         return <WrappedComponent user={ user } logout={ actions.signout } history={ history } />
       // If don't but token... check
       } else {
         history.push('/login')
-        return <div>Redirecting...</div>
+        return <div>You need to be login, redirecting to login page...</div>
       }
     }
   }

@@ -10,8 +10,9 @@ import ShareFeedback from './containers/ShareFeedback/ShareFeedback'
 import MyFeedback from './containers/MyFeedback/MyFeedback'
 import TeamFeedback from './containers/TeamFeedback/TeamFeedback'
 import Teams from './containers/Teams/Teams'
+import Answer from './containers/Answer/Answer'
 // Error pages
-import Error404 from './containers/Error404/Error404'
+// import Error404 from './containers/Error404/Error404'
 
 class Routes extends Component {
   render() {
@@ -23,7 +24,7 @@ class Routes extends Component {
           <Route path={ routesCode.AUTH.MYFB } component={withAuthorization(MyFeedback)} />
           <Route path={ routesCode.AUTH.TEAMFB } component={withAuthorization(TeamFeedback)} />
           <Route path={ routesCode.AUTH.TEAMS } component={withAuthorization(Teams)} />
-          <Route component={withAuthorization(Error404)} />
+          <Route path={ routesCode.AUTH.USERQUESTIONS } component={withAuthorization(Answer)} />
         </div>
       </BrowserRouter>
     );

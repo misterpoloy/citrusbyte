@@ -26,10 +26,10 @@ class ShareFeedback extends React.Component {
       <MainLayout user={ user  } logout={ logout } history={ history } >
         <div className="home-container">
           <Row>
-            <Col span={12}>
+            <Col span={6}>
               <h2>Share feedback</h2>
             </Col>
-            <Col span={12}>
+            <Col offset={12} span={6}>
               <CycleSelect />
             </Col>
           </Row>

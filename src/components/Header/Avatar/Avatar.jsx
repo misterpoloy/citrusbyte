@@ -6,10 +6,10 @@ const AvatarComponent = props => {
   return (
     <Row className="container">
       <Col span={8}>
-        <Avatar size="large" src={ props.user.photoURL } />
+        <Avatar size="large" src={ props.user ? props.user.photoURL : '' } />
       </Col>
       <Col offset={2} span={7}>
-        <div className="profile-name">{ props.user.displayName }</div>
+        <div className="profile-name">{ props.user ? props.user.displayName : '...' }</div>
         <a onClick={ props.logout } className="logout">Logout</a>
       </Col>
     </Row>

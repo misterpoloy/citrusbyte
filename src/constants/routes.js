@@ -8,6 +8,7 @@ export default {
     TEAMFB: '/team-feedback',
     TEAMS: '/teams',
     USERQUESTIONS: '/answer/user/:userQuestionsId',
+    USERQUESTIONSButton: '/answer/user',
     TEAMQUESTIONS: '/answer/team/:grupQuestionsId',
   },
   ADMIN: {
